@@ -9,10 +9,17 @@
 
 N = int(input('Введите число N... '))
 S = 1
-for i in range(1, N):
-    S = S * i
-    print(S, end=' , ')
-print(S * N)
+if N < 0:
+    N *= (-1)
+    for i in range(1, N):
+        S = S * i
+        print(S, end=' , ')
+    print(S * N)
+else:
+    for i in range(1, N):
+        S = S * i
+        print(S, end=' , ')
+    print(S * N)
     
 
 
