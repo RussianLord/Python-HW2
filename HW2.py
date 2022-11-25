@@ -3,7 +3,11 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
-
+N = input('Введите число... ')
+sum = 0
+for N in str(N):
+    sum = sum + int(N)
+print(sum)
 
 # 2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 # Пример: - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
@@ -43,8 +47,9 @@
 #     print(N , ' = ' , S + round((1 + 1 / N) ** N, 0))
 
 # 4. Реализуйте алгоритм перемешивания списка.
-import random
-listN = list(input())
-print('Оригинальный список ==>> ', listN)
-random.shuffle(listN)
-print('Перемешанный список ==>> ', listN)
+
+# import random
+# listN = list(input())
+# print('Оригинальный список ==>> ', listN)
+# random.shuffle(listN)
+# print('Перемешанный список ==>> ', listN)
