@@ -5,9 +5,17 @@
 
 N = input('Введите число... ')
 sum = 0
-for N in str(N):
-    sum = sum + int(N)
-print(sum)
+if ',' in N:
+    listN = N.split(',')
+    for N in str(listN[0]):
+        sum = sum + int(N)
+    for N in str(listN[1]):
+        sum = sum + int(N) 
+else:
+    listN = [N]
+    for N in str(N):
+        sum = sum + int(N)   
+print(f'Сумма чисел числа {str(listN)[1:-1]} = {sum}')
 
 # 2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 # Пример: - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
