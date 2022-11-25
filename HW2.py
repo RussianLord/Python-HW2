@@ -27,9 +27,18 @@
 
 N = int(input('Введите число N... ')) 
 S = 1
-for i in range(1, N):
-    S = S + round((1 + 1 / N) ** N, 0)
-    print(i , ' = ' , S, end=' , ')
-print(N , ' = ' , S + round((1 + 1 / N) ** N, 0))
+if N == 0:
+    print('Нельзя использовать ноль!')
+elif N < 0:
+    N *= (-1)
+    for i in range(1, N):
+        S = S + round((1 + 1 / N) ** N, 0)
+        print(i , ' = ' , S, end=' , ')
+    print(N , ' = ' , S + round((1 + 1 / N) ** N, 0))
+else:
+    for i in range(1, N):
+        S = S + round((1 + 1 / N) ** N, 0)
+        print(i , ' = ' , S, end=' , ')
+    print(N , ' = ' , S + round((1 + 1 / N) ** N, 0))
 
 # 4. Реализуйте алгоритм перемешивания списка.
